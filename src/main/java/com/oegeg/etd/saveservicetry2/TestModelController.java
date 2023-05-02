@@ -14,14 +14,16 @@ public class TestModelController
     @QueryMapping
     Iterable<TestModel> testModels()
     {
-        return testModelRepository.findAll();
+        Iterable<TestModel> models = testModelRepository.findAll();
+        return models;
     }
 
     @MutationMapping
-    public TestModel addTestModel(@Argument TestModelInput model)
+    public Boolean addTestModel(@Argument TestModelInput testModel)
     {
         TestModel n = new TestModel();
-        n.setName(model.name());
-        return testModelRepository.save(n);
+        n.setName(testModel.name());
+        testModelRepository.save(n);
+        return true;
     }
 }

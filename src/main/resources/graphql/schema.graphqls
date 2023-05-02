@@ -3,11 +3,11 @@ type Query {
 }
 
 type Mutation {
-    addTestModel(testModel: TestModelInput): TestModel
+    addTestModel(testModel: TestModelInput): Boolean
 }
 
 type TestModel {
-    id: ID!
+    id: ID
     name: String
 }
 

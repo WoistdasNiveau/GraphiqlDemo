@@ -16,6 +16,6 @@ public class TestModel
 {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private long ID;
+    private Long ID;
     private String name;
 }
