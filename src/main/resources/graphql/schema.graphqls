@@ -1,0 +1,16 @@
+type Query {
+    testModels: [TestModel]
+}
+
+type Mutation {
+    addTestModel(testModel: TestModelInput): String
+}
+
+type TestModel {
+    id: ID!
+    name: String
+}
+
+input TestModelInput {
+    name: String!
+}
