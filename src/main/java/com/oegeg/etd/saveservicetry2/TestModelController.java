@@ -18,11 +18,10 @@ public class TestModelController
     }
 
     @MutationMapping
-    public String addTestModel(@Argument TestModelInput model)
+    public TestModel addTestModel(@Argument TestModelInput model)
     {
         TestModel n = new TestModel();
         n.setName(model.name());
-        testModelRepository.save(n);
-        return "saved";
+        return testModelRepository.save(n);
     }
 }

@@ -3,7 +3,7 @@ type Query {
 }
 
 type Mutation {
-    addTestModel(testModel: TestModelInput): String
+    addTestModel(testModel: TestModelInput): TestModel
 }
 
 type TestModel {
@@ -12,5 +12,5 @@ type TestModel {
 }
 
 input TestModelInput {
-    name: String!
+    name: String
 }
