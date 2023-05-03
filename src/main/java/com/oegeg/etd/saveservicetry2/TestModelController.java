@@ -11,19 +11,19 @@ import org.springframework.stereotype.Controller;
 public class TestModelController
 {
     private final TestModelRepository testModelRepository;
-    @QueryMapping
+    //@QueryMapping
     Iterable<TestModel> testModels()
     {
         Iterable<TestModel> models = testModelRepository.findAll();
         return models;
     }
 
-    @MutationMapping
-    public Boolean addTestModel(@Argument TestModelInput testModel)
-    {
-        TestModel n = new TestModel();
-        n.setName(testModel.name());
-        testModelRepository.save(n);
-        return true;
-    }
+    //@MutationMapping
+    //public Boolean addTestModel(@Argument TestModelInput testModel)
+    //{
+    //    TestModel n = new TestModel();
+    //    n.setName(testModel.name());
+    //    testModelRepository.save(n);
+    //    return true;
+    //}
 }
