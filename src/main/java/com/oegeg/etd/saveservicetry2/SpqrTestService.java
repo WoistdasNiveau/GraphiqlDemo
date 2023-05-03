@@ -22,4 +22,11 @@ public class SpqrTestService implements ISpqrTestModelService
         _sqprTestModelRepository.save(model);
         return "saved";
     }
+
+    @GraphQLQuery(name="getAllSpqrTestModels")
+    public Iterable<SpqrTestModel> getAllSpqrTestModels()
+    {
+        Iterable<SpqrTestModel> models = _sqprTestModelRepository.findAll();
+        return models;
+    }
 }
